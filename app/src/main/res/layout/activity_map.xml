@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        tools:context=".MapsActivity" />
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:elevation="10dp"
+    android:background="@drawable/white_border"
+    android:id="@+id/relativelay1">
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="#fff"
+            android:text="Save"
+            android:textColor="#000" />
+<ImageView
+    android:layout_width="15dp"
+    android:layout_height="15dp"
+    android:id="@+id/search"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="90dp"
+    android:src="@drawable/ic_search"
+    />
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="387dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="22dp"
+        android:layout_toRightOf="@id/search"
+        android:hint="Enter address or City"
+        android:textColor="#000"
+        android:imeOptions="actionSearch"
+        android:textSize="15sp" />
+
+
+</RelativeLayout>
+
+    <Button
+        android:id="@+id/retrieve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/map"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="294dp"
+        android:layout_marginTop="-95dp"
+        android:layout_marginBottom="5dp"
+        android:visibility="invisible"
+        android:background="@color/common_google_signin_btn_text_light_default"
+        android:shadowColor="@color/white" />
+
+</RelativeLayout>
